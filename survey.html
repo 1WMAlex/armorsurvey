@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Economy Server Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Economy Server Survey</h1>
+    <form id="survey-form">
+        <!-- Page 1: Introduction -->
+        <div class="survey-page" id="page-1">
+            <h2>Introduction</h2>
+            <p>We're excited to introduce our upcoming economy server featuring online banking, real estate markets, item stores, jobs, and land ownership! Your feedback is crucial to help us tailor the experience to your preferences. Please take a few minutes to complete this survey.</p>
+            <button type="button" class="next-btn">Next</button>
+        </div>
+
+        <!-- Page 2: General Interest -->
+        <div class="survey-page" id="page-2">
+            <h2>General Interest</h2>
+            <label>1. How excited are you about the upcoming economy server?</label>
+            <ul>
+                <li><input type="radio" name="excitement" value="Very excited" required> Very excited</li>
+                <li><input type="radio" name="excitement" value="Somewhat excited"> Somewhat excited</li>
+                <li><input type="radio" name="excitement" value="Neutral"> Neutral</li>
+                <li><input type="radio" name="excitement" value="Not very excited"> Not very excited</li>
+                <li><input type="radio" name="excitement" value="Not at all excited"> Not at all excited</li>
+            </ul>
+
+            <label>2. Have you played on economy servers before?</label>
+            <ul>
+                <li><input type="radio" name="previous_experience" value="Yes" required> Yes</li>
+                <li><input type="radio" name="previous_experience" value="No"> No</li>
+            </ul>
+
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="button" class="next-btn">Next</button>
+        </div>
+
+        <!-- Page 3: Feature Preferences -->
+        <div class="survey-page" id="page-3">
+            <h2>Feature Preferences</h2>
+            <label>3. Please rate the importance of the following features:</label>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Very Important</th>
+                    <th>Important</th>
+                    <th>Neutral</th>
+                    <th>Not Important</th>
+                    <th>Not at all Important</th>
+                </tr>
+                <tr>
+                    <td>Online Banking System</td>
+                    <td><input type="radio" name="banking_system" value="Very Important" required></td>
+                    <td><input type="radio" name="banking_system" value="Important"></td>
+                    <td><input type="radio" name="banking_system" value="Neutral"></td>
+                    <td><input type="radio" name="banking_system" value="Not Important"></td>
+                    <td><input type="radio" name="banking_system" value="Not at all Important"></td>
+                </tr>
+                <!-- Repeat for other features -->
+                <!-- Real Estate Market -->
+                <tr>
+                    <td>Real Estate Market</td>
+                    <td><input type="radio" name="real_estate" value="Very Important" required></td>
+                    <td><input type="radio" name="real_estate" value="Important"></td>
+                    <td><input type="radio" name="real_estate" value="Neutral"></td>
+                    <td><input type="radio" name="real_estate" value="Not Important"></td>
+                    <td><input type="radio" name="real_estate" value="Not at all Important"></td>
+                </tr>
+                <!-- Online Item Store -->
+                <tr>
+                    <td>Online Item Store</td>
+                    <td><input type="radio" name="item_store" value="Very Important" required></td>
+                    <td><input type="radio" name="item_store" value="Important"></td>
+                    <td><input type="radio" name="item_store" value="Neutral"></td>
+                    <td><input type="radio" name="item_store" value="Not Important"></td>
+                    <td><input type="radio" name="item_store" value="Not at all Important"></td>
+                </tr>
+                <!-- Jobs/Professions -->
+                <tr>
+                    <td>Jobs/Professions</td>
+                    <td><input type="radio" name="jobs" value="Very Important" required></td>
+                    <td><input type="radio" name="jobs" value="Important"></td>
+                    <td><input type="radio" name="jobs" value="Neutral"></td>
+                    <td><input type="radio" name="jobs" value="Not Important"></td>
+                    <td><input type="radio" name="jobs" value="Not at all Important"></td>
+                </tr>
+                <!-- Land Ownership -->
+                <tr>
+                    <td>Land Ownership</td>
+                    <td><input type="radio" name="land_ownership" value="Very Important" required></td>
+                    <td><input type="radio" name="land_ownership" value="Important"></td>
+                    <td><input type="radio" name="land_ownership" value="Neutral"></td>
+                    <td><input type="radio" name="land_ownership" value="Not Important"></td>
+                    <td><input type="radio" name="land_ownership" value="Not at all Important"></td>
+                </tr>
+            </table>
+
+            <label>4. Are there any other features you'd like to see included?</label>
+            <textarea name="additional_features" rows="4" cols="50" placeholder="Your suggestions..."></textarea>
+
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="button" class="next-btn">Next</button>
+        </div>
+
+        <!-- Page 4: Gameplay Mechanics -->
+        <div class="survey-page" id="page-4">
+            <h2>Gameplay Mechanics</h2>
+            <label>5. What types of jobs or professions interest you the most? (Select all that apply)</label>
+            <ul>
+                <li><input type="checkbox" name="jobs_interests" value="Mining"> Mining</li>
+                <li><input type="checkbox" name="jobs_interests" value="Farming"> Farming</li>
+                <li><input type="checkbox" name="jobs_interests" value="Crafting"> Crafting</li>
+                <li><input type="checkbox" name="jobs_interests" value="Trading"> Trading</li>
+                <li><input type="checkbox" name="jobs_interests" value="Adventuring"> Adventuring</li>
+                <li><input type="checkbox" name="jobs_interests" value="Other"> Other: <input type="text" name="jobs_other"></li>
+            </ul>
+
+            <label>6. How important is a balanced economy to your gameplay experience?</label>
+            <ul>
+                <li><input type="radio" name="economy_balance" value="Extremely important" required> Extremely important</li>
+                <li><input type="radio" name="economy_balance" value="Very important"> Very important</li>
+                <li><input type="radio" name="economy_balance" value="Moderately important"> Moderately important</li>
+                <li><input type="radio" name="economy_balance" value="Slightly important"> Slightly important</li>
+                <li><input type="radio" name="economy_balance" value="Not at all important"> Not at all important</li>
+            </ul>
+
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="button" class="next-btn">Next</button>
+        </div>
+
+        <!-- Page 5: Community Interaction -->
+        <div class="survey-page" id="page-5">
+            <h2>Community Interaction</h2>
+            <label>7. How interested are you in player-to-player trading?</label>
+            <ul>
+                <li><input type="radio" name="trading_interest" value="Very interested" required> Very interested</li>
+                <li><input type="radio" name="trading_interest" value="Somewhat interested"> Somewhat interested</li>
+                <li><input type="radio" name="trading_interest" value="Neutral"> Neutral</li>
+                <li><input type="radio" name="trading_interest" value="Not very interested"> Not very interested</li>
+                <li><input type="radio" name="trading_interest" value="Not interested at all"> Not interested at all</li>
+            </ul>
+
+            <label>8. Would you participate in community events or competitions?</label>
+            <ul>
+                <li><input type="radio" name="community_events" value="Yes" required> Yes</li>
+                <li><input type="radio" name="community_events" value="Maybe"> Maybe</li>
+                <li><input type="radio" name="community_events" value="No"> No</li>
+            </ul>
+
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="button" class="next-btn">Next</button>
+        </div>
+
+        <!-- Page 6: Expectations and Concerns -->
+        <div class="survey-page" id="page-6">
+            <h2>Expectations and Concerns</h2>
+            <label>9. What are your expectations for the economy server?</label>
+            <textarea name="expectations" rows="4" cols="50" placeholder="Your expectations..."></textarea>
+
+            <label>10. Do you have any concerns or issues you want us to address?</label>
+            <textarea name="concerns" rows="4" cols="50" placeholder="Your concerns..."></textarea>
+
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="button" class="next-btn">Next</button>
+        </div>
+
+        <!-- Page 7: Engagement and Accessibility -->
+        <div class="survey-page" id="page-7">
+            <h2>Engagement and Accessibility</h2>
+            <label>11. How often do you anticipate playing on the server?</label>
+            <ul>
+                <li><input type="radio" name="playtime" value="Daily" required> Daily</li>
+                <li><input type="radio" name="playtime" value="Several times a week"> Several times a week</li>
+                <li><input type="radio" name="playtime" value="Weekly"> Weekly</li>
+                <li><input type="radio" name="playtime" value="Monthly"> Monthly</li>
+                <li><input type="radio" name="playtime" value="Occasionally"> Occasionally</li>
+            </ul>
+
+            <label>12. What is your primary time zone?</label>
+            <input type="text" name="timezone" placeholder="e.g., UTC+1, EST, PST" required>
+
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="button" class="next-btn">Next</button>
+        </div>
+
+        <!-- Page 8: Testing and Feedback -->
+        <div class="survey-page" id="page-8">
+            <h2>Testing and Feedback</h2>
+            <label>13. Would you be interested in participating in beta testing?</label>
+            <ul>
+                <li><input type="radio" name="beta_testing" value="Yes" required> Yes</li>
+                <li><input type="radio" name="beta_testing" value="No"> No</li>
+            </ul>
+
+            <label>14. Are you willing to provide ongoing feedback after the server launches?</label>
+            <ul>
+                <li><input type="radio" name="ongoing_feedback" value="Yes" required> Yes</li>
+                <li><input type="radio" name="ongoing_feedback" value="Maybe"> Maybe</li>
+                <li><input type="radio" name="ongoing_feedback" value="No"> No</li>
+            </ul>
+
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="button" class="next-btn">Next</button>
+        </div>
+
+        <!-- Page 9: Demographics -->
+        <div class="survey-page" id="page-9">
+            <h2>Demographics (Optional)</h2>
+            <label>15. What is your age group?</label>
+            <ul>
+                <li><input type="radio" name="age_group" value="Under 13"> Under 13</li>
+                <li><input type="radio" name="age_group" value="13-17"> 13-17</li>
+                <li><input type="radio" name="age_group" value="18-24"> 18-24</li>
+                <li><input type="radio" name="age_group" value="25-34"> 25-34</li>
+                <li><input type="radio" name="age_group" value="35+"> 35+</li>
+            </ul>
+
+            <label>16. Which platform do you primarily use for gaming?</label>
+            <ul>
+                <li><input type="radio" name="gaming_platform" value="PC"> PC</li>
+                <li><input type="radio" name="gaming_platform" value="Console"> Console</li>
+                <li><input type="radio" name="gaming_platform" value="Mobile"> Mobile</li>
+                <li><input type="radio" name="gaming_platform" value="Other"> Other: <input type="text" name="platform_other"></li>
+            </ul>
+
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="button" class="next-btn">Next</button>
+        </div>
+
+        <!-- Page 10: Final Thoughts -->
+        <div class="survey-page" id="page-10">
+            <h2>Final Thoughts</h2>
+            <label>17. Do you have any additional comments or suggestions?</label>
+            <textarea name="additional_comments" rows="4" cols="50" placeholder="Your comments..."></textarea>
+
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="submit" class="submit-btn">Submit</button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
